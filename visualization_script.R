@@ -1,10 +1,7 @@
-
-
-
-library(ggplot2)
 library(dplyr)
-library(usmap)
+library(ggplot2)
 library(ggthemes)
+library(usmap)
 
 # Graph 1 -----------------------------------------------------------------
 
@@ -67,9 +64,8 @@ waste_generation <-
   read.csv("data/waste_generation.csv", header = TRUE)
 
 waste_generation <- waste_generation %>%
-  gather(key = "variable", value = "value", -year)
+  gather(key = "variable", value = "value",-year)
 
-# colors2 <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 colors3 <- c("#E69F00", "#D55E00", "#009E73")
 
 df <- waste_generation %>%
@@ -101,7 +97,7 @@ graph2 <-
   geom_line(mapping = aes(group = variable,
                           color = variable),
             size = 2) +
-  facet_wrap(~ variable) +
+  facet_wrap( ~ variable) +
   labs(
     x = "",
     y = "Plastic in thousands of tons",
@@ -135,7 +131,9 @@ print(graph2)
 
 ggsave("graph2.png", width = 10, height = 6)
 
+
 # Graph 3 -----------------------------------------------------------------
+
 plastic <- read.csv("data/plastic.csv")
 
 colors3 <- c("#D55E00", "#E69F00", "#009E73")
@@ -211,9 +209,8 @@ print(graph3)
 ggsave("graph3.png", width = 10, height = 6)
 
 
-
-
 # Graph 4 -----------------------------------------------------------------
+
 world <- read.csv("data/world.csv")
 
 graph4 <- ggplot(world,
@@ -262,6 +259,7 @@ print(graph4)
 
 ggsave("graph4.png", width = 10, height = 8)
 
+
 # Graph 5 -----------------------------------------------------------------
 
 reuses <- read.csv("data/reuses.csv")
@@ -269,7 +267,7 @@ reuses <- read.csv("data/reuses.csv")
 shades <- c("#009E73", "#E69F00", "#D55E00")
 
 data <- reuses %>%
-  gather(key = "variable", value = "value", -times)
+  gather(key = "variable", value = "value",-times)
 
 graph5 <- ggplot(data = data,
                  mapping = aes(x = times,
