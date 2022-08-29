@@ -36,6 +36,8 @@ Americans are more likely to reuse cotton bags than paper or plastic bags accord
     <img src="figures/graph5.png" alt="Figure 5. Reuses of Different Types of Bags" width="512">
 </p
 
+<p></p>
+
 ## References
 
 Law, K., Starr, N., Siegler, T., Jambeck, J., Mallos, N., & Leonard, G. (2020, October 01). *The United States' contribution of plastic waste to land and ocean*. Retrieved from [https://advances.sciencemag.org/content/6/44/eabd0288/tab-figures-data](https://advances.sciencemag.org/content/6/44/eabd0288/tab-figures-data).
